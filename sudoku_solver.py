@@ -50,7 +50,8 @@ def _check_if_valid(num, seq_idx, board):
 
     # Build list containing box entries and check
     for r in range(3):
-        box.append(board[start_idx:start_idx+3])
+        for k in range(3):
+            box.append(board[start_idx+k])
         start_idx += 9
 
     if (num in box):
